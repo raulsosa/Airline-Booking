@@ -9,3 +9,4 @@
 /Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Core/obj/Debug/net10.0/refint/Booking.Core.dll
 /Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Core/obj/Debug/net10.0/Booking.Core.pdb
 /Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Core/obj/Debug/net10.0/ref/Booking.Core.dll
+/Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Core/obj/Debug/net10.0/Booking.Core.sourcelink.json

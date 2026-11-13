@@ -16,3 +16,4 @@
 /Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Cli/obj/Debug/net10.0/Booking.Cli.pdb
 /Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Cli/obj/Debug/net10.0/Booking.Cli.genruntimeconfig.cache
 /Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Cli/obj/Debug/net10.0/ref/Booking.Cli.dll
+/Users/raulsosawork/Desktop/Dev projects/AirlineBooking/Booking.Cli/obj/Debug/net10.0/Booking.Cli.sourcelink.json

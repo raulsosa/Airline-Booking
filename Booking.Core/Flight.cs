@@ -1,18 +1,28 @@
 public class Flight{
     private readonly List<Seat> _seats = new List<Seat>();
     public IReadOnlyList<Seat> Seats => _seats;
-    public int FlightId {get;}
+    public int FlightId {get; internal set;}
+
+    //FlightName/Number definition
     public int FlightCode {get;}
     public string AirlineCode {get;}
     public string FlightNumber => $"{AirlineCode}{FlightCode}";
+
+    //TailNumber definition
+    public string TailNumber {get;}
+
+    //Route definition
     public string Origin {get;}
     public string Destination {get;}
     public string Route => $"{Origin} to {Destination}";
+    
+    
+    //Time definition
     public DateTimeOffset Departure {get;}
     public DateTimeOffset Arrival{get;}
     public TimeSpan Duration => Arrival - Departure;
 
-    public Flight(string airlineCode, int flightCode ,string origin, string destination, DateTimeOffset departure, DateTimeOffset arrival){
+    public Flight(string airlineCode, int flightCode , string tailNumber, string origin, string destination, DateTimeOffset departure, DateTimeOffset arrival){
     
         //an empty or whitespace-only airline code
         if (string.IsNullOrWhiteSpace(airlineCode))
@@ -36,6 +46,11 @@ public class Flight{
             throw new ArgumentException("Origin airport must be exactly three characters long.", nameof(origin));
         }
 
+        //an empty or whitespace-only tailnumber
+        if (string.IsNullOrWhiteSpace(tailNumber))
+        {
+            throw new ArgumentException("Tail number cannot be empty or whitespace.", nameof(tailNumber));
+        }
 
         //an empty or whitespace only destination + make sure its only 3 characters long
         if (string.IsNullOrWhiteSpace(destination))
@@ -75,6 +90,7 @@ public class Flight{
         Destination = destination.Trim().ToUpperInvariant();
         Departure = departure;
         Arrival = arrival;
+        TailNumber = tailNumber.Trim().ToUpperInvariant();
     }
 
 }
